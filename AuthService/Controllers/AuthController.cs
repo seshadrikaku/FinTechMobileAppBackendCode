@@ -62,7 +62,14 @@ namespace AuthService.Controllers
         }
 
 
+        //Method to logout user and invalidate the token
+        [HttpGet("user-logout")])]
+        public IActionResult Logout()
+        {
+            return Ok("Logout API Version 1.0");
 
+
+        }
 
 
 
