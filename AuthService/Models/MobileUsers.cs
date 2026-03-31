@@ -1,5 +1,7 @@
 ﻿namespace AuthService.Models
 {
+
+    //Model for users who register or log in using their mobile number. This model includes fields for storing user information, OTP details, verification status, and device-related information. It also includes fields for soft deletion and tracking existing users.
     public class MobileUsers
     {
         public int Id { get; set; }
