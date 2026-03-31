@@ -158,6 +158,15 @@ namespace AuthService.Services
                 };
             }
 
+            if(UserInDb.OtpGeneratedAt == null || UserInDb.OtpGeneratedAt < DateTime.UtcNow.AddMinutes(-5))
+            {
+                return new CommonApiResponse<OtpVerificationResponseDto>
+                {
+                    StatusCode = 400,
+                    Message = "OTP has expired. Please request a new one.",
+                };
+            }
+
 
                 UserInDb.IsVerified = true;
                 UserInDb.DeviceToken = otpVerifyRequestDto.DeviceToken;
