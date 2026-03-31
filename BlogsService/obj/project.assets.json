@@ -447,31 +447,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\91630\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/harindersahu/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\91630\\Desktop\\MobileAppBackendCode\\BlogsService\\BlogsService.csproj",
+      "projectUniqueName": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj",
       "projectName": "BlogsService",
-      "projectPath": "C:\\Users\\91630\\Desktop\\MobileAppBackendCode\\BlogsService\\BlogsService.csproj",
-      "packagesPath": "C:\\Users\\91630\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\91630\\Desktop\\MobileAppBackendCode\\BlogsService\\obj\\",
+      "projectPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/BlogsService/BlogsService.csproj",
+      "packagesPath": "/Users/harindersahu/.nuget/packages/",
+      "outputPath": "/Users/harindersahu/Downloads/back-end-testing/FinTechMobileAppBackendCode/BlogsService/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\91630\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/harindersahu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -520,7 +513,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
