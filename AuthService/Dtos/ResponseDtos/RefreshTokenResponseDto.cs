@@ -1,17 +1,8 @@
-namespace AuthService.Models
+namespace AuthService.Dtos
 {
     public class RefreshTokenResponseDto
     {
-
-
-        public Guid MobileUserId { get; set; }
-        public string? AccessToken { get; set; }
-        public string? RefreshToken { get; set; }
-
-
-
-
-
-
+        public string AccessToken { get; set; } = null!;
+        public string RefreshToken { get; set; } = null!;
     }
 }

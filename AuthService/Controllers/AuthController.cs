@@ -1,135 +1,69 @@
-﻿using AuthService.Data;
-using AuthService.Models;
+using AuthService.Dtos;
 using AuthService.Services;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.RateLimiting;
+using Shared.Common;
 
 namespace AuthService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class AuthenticationController : ControllerBase
     {
-
-        // private readonly ILogger<AuthController> _logger;
         private readonly IAuthService _authService;
 
-        private readonly IConfiguration _config;
-
-        public AuthController(IAuthService authService, IConfiguration config)
+        public AuthenticationController(IAuthService authService)
         {
             _authService = authService;
-            _config = config;
-
-
-
         }
 
+        private IActionResult ApiResult<T>(ApiResponse<T> response) =>
+            StatusCode(response.StatusCode, response);
 
+        /// <summary>Sends a one-time password to the given mobile number.</summary>
+        [HttpPost("send-otp")]
+        [EnableRateLimiting("otp")]
+        public async Task<IActionResult> SendOtp([FromBody] SendOtpRequestDto request) =>
+            ApiResult(await _authService.SendOtpAsync(request));
 
-        [HttpGet("check-db")]
-        public async Task<IActionResult> CheckDb()
-        {
-            try
-            {
-                using var connection = new SqlConnection(
-                    _config.GetConnectionString("DefaultConnection")
-                );
+        /// <summary>Verifies the OTP and returns access + refresh tokens.</summary>
+        [HttpPost("verify-otp")]
+        public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpRequestDto request) =>
+            ApiResult(await _authService.VerifyOtpAsync(request));
 
-                await connection.OpenAsync();
-
-                return Ok("✅ Database Connected");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"❌ Connection Failed: {ex.Message}");
-            }
-        }
-
-
-
-
-        //OtpLogin Api 
-        [HttpPost("otp-login")]
-        public async Task<IActionResult> OtpLogin(LoginRequestDto loginRequestDto)
-        {
-
-
-            // Implement OTP login logic here
-            return Ok(await _authService.OtpLoginAsync(loginRequestDto));
-        }
-
-
-        //Otp verification Api 
-        [HttpPost("otp-verification")]
-        public async Task<IActionResult> OtpVerification(OtpVerifyRequestDto otpVerifyRequestDto)
-        {
-            // Implement OTP login logic here
-            return Ok(await _authService.VerifyOtpAsync(otpVerifyRequestDto));
-        }
-
-        //OtpLogin Api 
-        [HttpPost("user-register")]
-        public async Task<IActionResult> ManageUserDetails(RegisterRequestDto registerRequestDto)
-        {
-            // Implement OTP login logic here
-            return Ok(await _authService.ManageUserDetailsAsync(registerRequestDto));
-        }
-
-
+        /// <summary>Completes user profile. Requires a valid access token.</summary>
         [Authorize]
-        //OtpLogin Api 
-        [HttpGet("get-user-details")]
-        public async Task<IActionResult> GetUserDetailsById()
-        {
-            // Implement OTP login logic here
-            return Ok(await _authService.GetUserDetailsAsync());
-        }
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterUserRequestDto request) =>
+            ApiResult(await _authService.RegisterUserAsync(request));
 
+        /// <summary>Returns the authenticated user's profile.</summary>
+        [Authorize]
+        [HttpGet("user-details")]
+        public async Task<IActionResult> GetUserDetails() =>
+            ApiResult(await _authService.GetUserDetailsAsync());
 
-        //Method to update FCM token for the user
-        [HttpPost("update-fcm-token")]
-        public async Task<IActionResult> UpdateFcmToken(string NewFcmToken)
-        {
-            // Implement OTP login logic here
-            return Ok(await _authService.UpdateFcmTokenAsync(NewFcmToken));
-        }
-
-
-        //Method to get api version
-        [HttpGet("get-api-version")]
-        public async Task<IActionResult> GetApiVersion()
-        {
-            return Ok(await _authService.GetAppVersionAsync());
-
-
-        }
-
-        //Method to refresh JWT token using refresh token we will get new access token and new refresh token
+        /// <summary>Issues a new access + refresh token pair. Tokens go in the request body, never in the URL.</summary>
         [HttpPost("refresh-token")]
-        public async Task<IActionResult> RefreshToken(string RefreshToken, Guid MobileUserId)
-        {
-            return Ok(await _authService.RefreshTokenAsync(RefreshToken, MobileUserId));
-        }
+        public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenRequestDto request) =>
+            ApiResult(await _authService.RefreshTokenAsync(request));
 
-
-        //Method to logout user
+        /// <summary>Invalidates the current session server-side. Requires a valid access token.</summary>
+        [Authorize]
         [HttpPost("logout")]
-        public async Task<IActionResult> Logout(LogoutRequestDto logoutRequestDto)
-        {
-            // Implement logout logic here
-            return Ok(await _authService.LogoutAsync(logoutRequestDto));
-        }
+        public async Task<IActionResult> Logout() =>
+            ApiResult(await _authService.LogoutAsync());
 
+        /// <summary>Updates the FCM push notification token for the authenticated user.</summary>
+        [Authorize]
+        [HttpPatch("fcm-token")]
+        public async Task<IActionResult> UpdateFcmToken([FromBody] UpdateFcmTokenRequestDto request) =>
+            ApiResult(await _authService.UpdateFcmTokenAsync(request.FcmToken));
 
-
-
-
-
-
-
-
+        /// <summary>Returns the minimum required app version. Public endpoint.</summary>
+        [HttpGet("app-version")]
+        public async Task<IActionResult> GetAppVersion() =>
+            ApiResult(await _authService.GetAppVersionAsync());
     }
 }

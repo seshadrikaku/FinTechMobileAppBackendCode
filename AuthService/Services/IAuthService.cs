@@ -1,28 +1,17 @@
-﻿using AuthService.Models;
+using AuthService.Dtos;
 using Shared.Common;
 
 namespace AuthService.Services
 {
     public interface IAuthService
     {
-        
-        public Task<CommonApiResponse<LoginResponseDto>> OtpLoginAsync(LoginRequestDto loginRequestDto);
-        public Task<CommonApiResponse<OtpVerificationResponseDto>> VerifyOtpAsync(OtpVerifyRequestDto otpVerifyRequestDto);
-
-        public Task<CommonApiResponse<RegisterResponseDto>> ManageUserDetailsAsync(RegisterRequestDto registerRequestDto);
-
-       public Task<CommonApiResponse<UserDetailsResponseDto>> GetUserDetailsAsync();
-
-       public Task<CommonApiResponse<bool>> UpdateFcmTokenAsync(string NewFcmToken);
-
-       public Task<CommonApiResponse<RefreshTokenResponseDto>> RefreshTokenAsync(string RefreshToken ,Guid MobileUserId);
-
-       public Task<CommonApiResponse<string>> GetAppVersionAsync();
-
-       public Task<CommonApiResponse<bool>> LogoutAsync(LogoutRequestDto logoutRequestDto);
-
-        
+        Task<ApiResponse<SendOtpResponseDto>> SendOtpAsync(SendOtpRequestDto request);
+        Task<ApiResponse<VerifyOtpResponseDto>> VerifyOtpAsync(VerifyOtpRequestDto request);
+        Task<ApiResponse<RegisterUserResponseDto>> RegisterUserAsync(RegisterUserRequestDto request);
+        Task<ApiResponse<UserDetailsResponseDto>> GetUserDetailsAsync();
+        Task<ApiResponse<bool>> UpdateFcmTokenAsync(string fcmToken);
+        Task<ApiResponse<RefreshTokenResponseDto>> RefreshTokenAsync(RefreshTokenRequestDto request);
+        Task<ApiResponse<string>> GetAppVersionAsync();
+        Task<ApiResponse<bool>> LogoutAsync();
     }
-
-
 }
