@@ -1,1 +1,36 @@
-﻿
+﻿{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/auth/send-otp",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/Send-OTP",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/verify-otp",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/verify-otp",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        }
+
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5078"
+    }
+}

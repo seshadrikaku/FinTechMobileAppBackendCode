@@ -35,3 +35,13 @@
 /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/obj/Debug/net8.0/OcelotApiGateway.pdb
 /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/obj/Debug/net8.0/OcelotApiGateway.genruntimeconfig.cache
 /Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/obj/Debug/net8.0/ref/OcelotApiGateway.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/FluentValidation.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/IPAddressRange.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/Microsoft.Extensions.DiagnosticAdapter.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/OcelotApiGateway/bin/Debug/net8.0/Ocelot.dll
