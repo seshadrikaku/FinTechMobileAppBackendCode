@@ -54,14 +54,14 @@ namespace AuthService.Services
 
             var user = await _dbContext.MobileUsers
                 .FirstOrDefaultAsync(u => u.MobileNumber == request.MobileNumber);
-   var otp = GenerateOtp();
+            var otp = GenerateOtp();
             Guid mobileUserId;
 
             if (user == null)
             {
                 // New user — generate OTP in the legacy [Otp] column
                 mobileUserId = Guid.NewGuid();
-       
+
 
                 await _dbContext.MobileUsers.AddAsync(new MobileUser
                 {
@@ -89,7 +89,7 @@ namespace AuthService.Services
                         403);
 
                 mobileUserId = user.MobileUserId;
-             
+
                 user.Otp = otp;
                 user.OtpAttempts = 0; // Reset failed verification attempts on new OTP
                 user.OtpGeneratedAt = DateTime.UtcNow;
@@ -108,8 +108,8 @@ namespace AuthService.Services
                     MobileUserId = mobileUserId,
                     MobileNumber = request.MobileNumber,
                     CountryCode = request.CountryCode,
-                    Otp=otp,
-                    
+                    Otp = otp,
+
                 },
                 "OTP sent successfully.");
         }
