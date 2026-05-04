@@ -1,0 +1,12 @@
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\bin\Release\net8.0\Shared.Common.deps.json
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\bin\Release\net8.0\Shared.Common.dll
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\bin\Release\net8.0\Shared.Common.pdb
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\Shared.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\Shared.Common.AssemblyInfoInputs.cache
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\Shared.Common.AssemblyInfo.cs
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\Shared.Common.csproj.CoreCompileInputs.cache
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\Shared.Common.sourcelink.json
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\Shared.Common.dll
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\refint\Shared.Common.dll
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\Shared.Common.pdb
+C:\Users\91630\Desktop\MobileAppBackendCode\Shared.Common\obj\Release\net8.0\ref\Shared.Common.dll
