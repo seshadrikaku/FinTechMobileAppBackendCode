@@ -1,16 +1,11 @@
-namespace AuthService.Models
+namespace AuthService.Dtos
 {
-    public class OtpVerifyRequestDto
+    public class VerifyOtpRequestDto
     {
-
         public Guid MobileUserId { get; set; }
-
-        public string FcmToken { get; set; }
-
-        public string DeviceToken { get; set; }
-        public string Otp { get; set; }
-
-        public string Version { get; set; }
-       
+        public string Otp { get; set; } = null!;
+        public string? FcmToken { get; set; }
+        public string? DeviceToken { get; set; }
+        public string? AppVersion { get; set; }
     }
 }

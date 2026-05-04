@@ -1,10 +1,8 @@
-namespace AuthService.Models
+namespace AuthService.Dtos
 {
-    public class LogoutRequestDto
+    // Logout requires [Authorize] — user ID comes from the JWT claim, no request body needed.
+    public class UpdateFcmTokenRequestDto
     {
-
-        public string MobileUserId { get; set; }
-
-       
+        public string FcmToken { get; set; } = null!;
     }
 }

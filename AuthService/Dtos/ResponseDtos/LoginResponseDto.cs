@@ -1,18 +1,12 @@
-namespace AuthService.Models
+namespace AuthService.Dtos
 {
-    public class LoginResponseDto
+    // OTP is NOT returned — it is delivered via SMS only
+    public class SendOtpResponseDto
     {
-
-
         public Guid MobileUserId { get; set; }
-        public string MobileNumber { get; set; }
-
-        public string CountryCode { get; set; }
-
-        public string otp { get; set; }
-
-
-
-
+        public string MobileNumber { get; set; } = null!;
+        public string? CountryCode { get; set; }
+        public string Otp { get; set; }
+        
     }
 }
