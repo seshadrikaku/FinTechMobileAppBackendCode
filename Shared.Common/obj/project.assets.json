@@ -8,24 +8,31 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/harindersahu/.nuget/packages/": {}
+    "C:\\Users\\91630\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
+      "projectUniqueName": "C:\\Users\\91630\\Desktop\\MobileAppBackendCode\\Shared.Common\\Shared.Common.csproj",
       "projectName": "Shared.Common",
-      "projectPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/Shared.Common.csproj",
-      "packagesPath": "/Users/harindersahu/.nuget/packages/",
-      "outputPath": "/Users/harindersahu/Downloads/Back/FinTechMobileAppBackendCode/Shared.Common/obj/",
+      "projectPath": "C:\\Users\\91630\\Desktop\\MobileAppBackendCode\\Shared.Common\\Shared.Common.csproj",
+      "packagesPath": "C:\\Users\\91630\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\91630\\Desktop\\MobileAppBackendCode\\Shared.Common\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/harindersahu/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\91630\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
