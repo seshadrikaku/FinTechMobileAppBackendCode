@@ -27,8 +27,217 @@
             "UpstreamHttpMethod": [
                 "POST"
             ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/register",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/register",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/user-details",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/userDetails",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/refresh-token",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/refresh-token",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/logout",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/logout",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/fcm-token",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/fcm-tokenfcm-token",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/app-version",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/auth/app-version",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/blogs/add-blog",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/add-blog",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/blogs/get-all-blogs",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/get-all-blogs",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/blogs/update-blog/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/update-blog/{id}",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/blogs/delete-blog/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/delete-blog/{id}",
+            "UpstreamHttpMethod": [
+                "DELETE"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/blogs/toggle-like/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/toggle-like/{id}",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/blogs/get-comments/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/get-comments/{id}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/blogs/add-comment/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/add-comment/{id}",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+         {
+            "DownstreamPathTemplate": "/api/blogs/update-comment",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/update-comment",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+         {
+            "DownstreamPathTemplate": "/api/blogs/delete-comment",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5131
+                }
+            ],
+            "UpstreamPathTemplate": "/api/blogs/delete-comment",
+            "UpstreamHttpMethod": [
+                "DELETE"
+            ]
         }
-
     ],
     "GlobalConfiguration": {
         "BaseUrl": "http://localhost:5078"

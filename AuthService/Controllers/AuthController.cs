@@ -57,7 +57,7 @@ namespace AuthService.Controllers
 
         /// <summary>Updates the FCM push notification token for the authenticated user.</summary>
         [Authorize]
-        [HttpPatch("fcm-token")]
+        [HttpPost("fcm-token")]
         public async Task<IActionResult> UpdateFcmToken([FromBody] UpdateFcmTokenRequestDto request) =>
             ApiResult(await _authService.UpdateFcmTokenAsync(request.FcmToken));
 
